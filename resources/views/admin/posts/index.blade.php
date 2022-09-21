@@ -10,6 +10,8 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>Post Date</th>
+                        <th></th>
+                        <th></th>
                     </thead>
                     <tbody>
                         @forelse ($posts as $post)
@@ -21,7 +23,7 @@
                                 <td>{{ $post->post_date}}</td>
                                 <td>
                                     <a href="{{ route('admin.posts.edit', $post->id) }}">
-                                        <button class="btn btn-sm btn-success text-light fw-bold">Edit</button>
+                                        <button class="btn btn-sm btn-success text-light font-weight-bold">Edit</button>
                                     </a>
                                 </td>
                                 <td>
@@ -29,7 +31,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <a href="">
-                                            <button class="btn btn-sm btn-danger fw-bold">Delete</button>
+                                            <button class="btn btn-sm btn-danger font-weight-bold">Delete</button>
                                         </a>
                                     </form>
                                 </td>
